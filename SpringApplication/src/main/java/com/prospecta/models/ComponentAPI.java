@@ -10,11 +10,15 @@ import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-
+@Entity
 @lombok.Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class ComponentAPI {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Integer eid;
 	
 	@JsonProperty("API")
 	private String api;
